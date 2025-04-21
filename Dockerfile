@@ -16,4 +16,4 @@ VOLUME /app/temp
 COPY telegram_youtube_downloader /app/telegram_youtube_downloader
 
 # Run
-CMD ["python3", "telegram_youtube_downloader"]
+CMD gunicorn app:app & python -m telegram_youtube_downloader
